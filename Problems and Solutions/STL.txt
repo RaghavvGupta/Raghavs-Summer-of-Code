@@ -1,0 +1,42 @@
+SETS
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <set>
+using namespace std;
+
+
+int main() {
+    set <int> s;
+    int q;
+    cin >> q;
+    while(q--)
+    {
+        int y, x;
+        cin >> x >> y;
+        switch(y){
+            case 1:
+            s.insert(x);
+            case 2:
+            s.erase(x);
+            case 3:
+            {
+            set<int>::iterator itr=s.find(x);
+            auto size = s.size();
+            if (itr < size) {
+                cout << "Yes";
+            }
+            else{
+                cout << "No";
+                
+            }
+            
+            }
+            }
+    }
+    
+    return 0;
+}
