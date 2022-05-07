@@ -24,7 +24,7 @@ Output: 4
 
 
 COMPLETE SOLUTION
-TIME COMPLEXITY-O (lg N)
+TIME COMPLEXITY- O(lg N)
 
 #include<iostream>
 using namespace std;
