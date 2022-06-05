@@ -19,7 +19,11 @@ int main(){
         otm = rem;
         oth = oth + hours_left;
     }
-    cout << setw(2) << setfill('0') << oth <<" " << otm;
+    else if(otm == 60){
+        oth++;
+        otm = 0;
+    }
+    cout << setw(2) << setfill('0') << oth <<" " << setw(2) << setfill('0') << otm;
     
     
     return 0;
