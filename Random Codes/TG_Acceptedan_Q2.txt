@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    
+    int t;
+    cin >> t;
+    while (t--){
+        
+        int n, g;
+        cin >> n >> g;
+         int a[g];
+         for (int i = 0; i < g; i++) {
+             cin >> a[i];
+         }
+        sort(a, a + g);
+        int val = 0;
+        for (int i = 0; i < n; i++) {
+            val = val + a[i];
+        }
+        cout << val << endl;
+        
+    }
+    
+    return 0;
+}

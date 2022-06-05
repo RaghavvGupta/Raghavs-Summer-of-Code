@@ -1,0 +1,22 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    int n;
+    cin >> n;
+    int count = 0;
+    while (n--){
+    double w, h;
+    cin >> w >> h;
+    double r = (w / h);
+    double r2 = (h / w);
+    if( (1.7 >= r && r >= 1.6) || (1.6 <= r2 && r2 <= 1.7)){
+        count++;
+        
+    }
+    }
+    cout << count << endl;
+    return 0;
+}

@@ -1,0 +1,30 @@
+//	HACKEREARTH QUES-HEXADECIMAL NUMBERS OF LINEAR SEARCH TOPIC ACCEPTED SOLUTION
+#include<bits/stdc++.h>
+using namespace std;
+int hex(int x){
+    int rem, ans = 0;
+    while (x > 0){
+        
+        rem = x % 16;
+        ans += rem;
+        x = x / 16;
+        
+    }
+    return ans;
+}
+int main(){
+    
+    int t;
+    cin >> t;
+    while (t--){
+    int l, r;
+    cin >> l >> r;
+    int count = 0;
+    for (int i = l; i <= r; i++){
+        if( __gcd(i, hex(i)) > 1)
+        count ++;
+    }
+    cout << count << endl;
+    }
+    return 0;
+}

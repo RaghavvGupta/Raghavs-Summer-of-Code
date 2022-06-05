@@ -1,0 +1,26 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    int x, y, s, t;
+    cin >> x >> y >> s >>t;
+    int t_left = t - (x + y);
+    int points = 0;
+    int i = x, j = y;
+    int a = y + s;
+   
+    for (int i = x; i < x + s; i++) 
+    {
+        for (int j = y; j < y + s; j++) 
+        {
+            if(i + j <= t) points++;
+        }
+    }
+    
+    
+    
+    cout << points;
+    return 0;
+}

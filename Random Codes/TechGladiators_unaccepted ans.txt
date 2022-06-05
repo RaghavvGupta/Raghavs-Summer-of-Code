@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+int main(){
+    
+    int lth, ltm, tth, ttm;
+    cin >> lth >> ltm;
+    cin >> tth >> ttm;
+    
+    int oth = lth + tth;
+    int otm = ltm + ttm;
+    
+    
+    if(otm > 60){
+        int rem = otm % 60;
+        
+        int hours_left = otm / 60;
+        otm = rem;
+        oth = oth + hours_left;
+    }
+    cout << setw(2) << setfill('0') << oth <<" " << otm;
+    
+    
+    return 0;
+}
