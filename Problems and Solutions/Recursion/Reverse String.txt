@@ -1,0 +1,22 @@
+class Solution {
+    
+    vector<char> v(vector <char>& s, int i, int n){
+        
+       if (i > n)
+        return s;
+        
+            swap(s[i], s[n]);
+            v(s, ++i, --n);
+        return s;
+    }
+        
+    
+public:
+    void reverseString(vector<char>& s) {
+        
+        int i = 0, n = s.size() -1;
+        v(s, i, n);
+        
+        
+    }
+};
