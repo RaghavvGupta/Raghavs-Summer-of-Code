@@ -1,0 +1,9 @@
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        int low = 0, hi = s.size() - 1;
+        while(low < hi){
+            swap(s[low++], s[hi--]);
+        }
+    }
+};
