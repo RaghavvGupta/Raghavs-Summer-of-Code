@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& p) {
+        int maxi = 0;
+        int buy = p[0];
+        int ans = 0;
+        for(int i = 1; i< p.size(); i++){
+            if(p[i] < buy) buy = p[i];
+            else ans = max(ans, p[i] - buy);
+            
+            
+            
+            /*for(int j = i; j< p.size(); j++){
+            int diff = p[j] - p[i];
+                maxi = max(maxi, diff);
+            }*/
+        }
+        return ans;
+    }
+};

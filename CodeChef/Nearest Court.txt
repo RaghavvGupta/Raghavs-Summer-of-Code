@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main(){
+    
+    int t;
+    cin >> t;
+    while (t--){
+        int x, y;
+        cin >> x >> y;
+        int mean = (x + y) / 2;
+        int min_d = min(abs(mean - x), abs(mean - y));
+        if((x + y) % 2 == 1) cout << min_d + 1 << endl;
+        else{
+        cout << min_d << endl;
+        }
+    }
+    
+    return 0;
+}

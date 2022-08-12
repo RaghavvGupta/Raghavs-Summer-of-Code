@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(){
+    
+    int t;
+    cin >> t;
+    while (t--){
+        int x, y, z, w;
+        cin >> x >> y >> z >> w;
+        if((x - z) > (y - w)) cout << "Second" << endl;
+        else if((x - z) < (y - w)) cout << "First" << endl;
+        else cout << "Any" << endl;
+    }
+    
+    return 0;
+}
