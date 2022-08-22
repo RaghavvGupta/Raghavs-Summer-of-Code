@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        
+        int n;
+        cin >> n;
+        int a[n];
+        map <int, int> mp;
+        for (int i = 0; i < n; i++) {
+            /* code */
+            cin >> a[i];
+            mp[a[i]]++;
+        }
+        vector<int> v;
+        for (auto i : mp) {
+            /* code */
+            v.push_back(i.second);
+        }
+        sort(v.begin(), v.end(), greater<int>());
+        int sum = 0;
+        for (int i = 1; i < v.size(); i++) {
+            /* code */
+            sum += v[i];
+        }
+        
+        if(v.size() == 1) 
+        {
+            cout << "No" << endl;
+        }
+        else{
+        if(sum + 1 >= v[0]) cout << "Yes" << endl;
+        else cout << "no" << endl;
+        }
+    }
+    
+    
+    return 0;
+}
